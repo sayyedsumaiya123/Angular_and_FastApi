@@ -1,0 +1,355 @@
+/* ---------- demo styles ----------
+   Paste this into src/index.css (after the Vite defaults).
+   Shared by every example in the workshop. */
+
+body {
+  font-family: 'Poppins', system-ui, sans-serif;
+  background: #ffffff;
+  color: #0f1117;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* two or more cards side by side */
+.page {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* the main example card */
+.card {
+  width: 340px;
+  background: #f6f7f9;
+  border: 1px solid #dfe3e8;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 10px 40px rgba(15, 17, 23, 0.08);
+}
+
+/* small pill label at top of a card */
+.badge {
+  display: inline-block;
+  background: rgba(99, 102, 241, 0.12);
+  color: #6366f1;
+  border: 1px solid #6366f1;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+/* big title inside a card */
+.ev-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+/* small body text */
+.desc {
+  color: #4b5563;
+  font-size: 13.5px;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+/* small info line */
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13.5px;
+  color: #4b5563;
+  margin-bottom: 16px;
+}
+
+/* accent number / line inside a card */
+.going {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.going b {
+  color: #6366f1;
+  font-weight: 700;
+}
+
+/* text input */
+.name-input {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #dfe3e8;
+  border-radius: 10px;
+  color: #0f1117;
+  font-family: inherit;
+  font-size: 13.5px;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  outline: none;
+}
+
+.name-input:focus {
+  border-color: #6366f1;
+}
+
+.name-input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* primary button — full width by default */
+.btn {
+  width: 100%;
+  background: #6366f1;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 11px 16px;
+  cursor: pointer;
+  transition: filter 0.15s ease;
+}
+
+.btn:hover {
+  filter: brightness(1.12);
+}
+
+/* smaller / inline button */
+.btn-auto {
+  width: auto;
+  padding: 8px 16px;
+}
+
+/* success / result line (green) */
+.status {
+  color: #16a34a;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* small grey helper note */
+.demo-note {
+  color: #4b5563;
+  font-size: 12.5px;
+  margin-top: 12px;
+  line-height: 1.6;
+}
+
+/* horizontal group */
+.row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* inline code chip */
+.mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 13px;
+  background: #ffffff;
+  border: 1px solid #dfe3e8;
+  border-radius: 8px;
+  padding: 6px 10px;
+}
+
+/* tiny colored tag */
+.pill {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.pill-green {
+  background: rgba(22, 163, 74, 0.12);
+  color: #16a34a;
+}
+
+.pill-yellow {
+  background: rgba(202, 138, 4, 0.14);
+  color: #ca8a04;
+}
+
+.pill-red {
+  background: rgba(220, 38, 38, 0.12);
+  color: #dc2626;
+}
+
+.pill-blue {
+  background: rgba(99, 102, 241, 0.12);
+  color: #6366f1;
+}
+
+/* ---------- lists (examples-b) ---------- */
+
+.event-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.event-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #dfe3e8;
+  border-radius: 10px;
+  padding: 12px 16px;
+}
+
+.event-name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.event-date {
+  font-size: 13px;
+  color: #6366f1;
+  font-weight: 600;
+}
+
+/* ---------- forms (examples-b) ---------- */
+
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+/* ---------- api / user cards (examples-b) ---------- */
+
+.user-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.user-card {
+  background: #ffffff;
+  border: 1px solid #dfe3e8;
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.user-email {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.error-text {
+  color: #dc2626;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+/* ---------- rock paper scissors ---------- */
+
+.rps-card {
+  margin: 0 auto;
+}
+
+.rps-scores {
+  margin-bottom: 18px;
+}
+
+.rps-fight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 34px;
+  padding: 12px 0 6px;
+}
+
+.rps-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.rps-emoji {
+  font-size: 46px;
+  line-height: 1;
+}
+
+.rps-name {
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #4b5563;
+}
+
+.rps-vs {
+  font-size: 14px;
+  font-weight: 700;
+  color: #4b5563;
+}
+
+.rps-result {
+  margin: 14px 0;
+  font-size: 16px;
+}
+
+.rps-choices {
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.rps-choice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 92px;
+  background: #f6f7f9;
+  border: 1px solid #dfe3e8;
+  border-radius: 12px;
+  padding: 12px 8px;
+  color: #0f1117;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 0.15s ease;
+}
+
+.rps-choice:hover {
+  filter: brightness(0.96);
+}
+
+.rps-choice-emoji {
+  font-size: 30px;
+  line-height: 1;
+}
+
+.rps-reset {
+  width: 100%;
+}
